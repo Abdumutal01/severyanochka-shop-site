@@ -1,0 +1,122 @@
+@import "../../../App.scss";
+.delivery-form {
+  padding: 20px;
+}
+
+.delivery-form-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.section__title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field__label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.input-field__input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input-field__input--select {
+  appearance: none;
+  padding-right: 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
+    no-repeat right 8px center;
+  background-size: 16px;
+}
+
+.input-field--street {
+  flex-grow: 1;
+}
+
+.input-field--number {
+  width: 80px;
+}
+
+.time-slots {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.time-slot {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background: none;
+  font-size: 14px;
+  color: #666;
+}
+
+.time-slot--active {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.phone-input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+// .phone-input__field {
+//   flex-grow: 1;
+// }
+.phone-input-btn2,
+.phone-input__button {
+  margin: 0 40px;
+  padding: 9px 20px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+}
+
+.phone-input-btn2 {
+  color: $color70;
+  background: transparent;
+}
+
+.phone-input__button:hover {
+  background-color: #f4511e;
+}
+
+.size-hint {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}

@@ -1,0 +1,9 @@
+@mixin star() {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}

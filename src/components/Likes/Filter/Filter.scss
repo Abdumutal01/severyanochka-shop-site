@@ -1,0 +1,136 @@
+.filter {
+  padding: 1rem;
+  background-color: transparent;
+}
+.filter__title {
+  padding: 10px;
+  background: #f3f2f1;
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.filter__section {
+  margin-bottom: 1.5rem;
+}
+.filter__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.filter__label {
+  color: #4b5563;
+}
+.filter__clear {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.filter__clear:hover {
+  color: #6b7280;
+}
+.filter__price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.filter__input {
+  width: 5rem;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+}
+.filter__input:focus {
+  outline: none;
+  border-color: #93c5fd;
+}
+.filter__separator {
+  color: #9ca3af;
+}
+.filter__range {
+  width: 100%;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 9999px;
+  appearance: none;
+  cursor: pointer;
+}
+.filter__range::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.filter__checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.filter__checkbox-item {
+  display: flex;
+  align-items: center;
+}
+.filter__checkbox {
+  margin-right: 0.5rem;
+}
+.filter__checkbox-label {
+  color: #4b5563;
+}
+.filter__toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.filter__toggle-input {
+  display: none;
+}
+.filter__toggle-slider {
+  width: 2.75rem;
+  height: 1.5rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+.filter__toggle-slider:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+.filter__toggle-input:checked + .filter__toggle-slider {
+  background-color: #22c55e;
+}
+.filter__toggle-input:checked + .filter__toggle-slider:after {
+  transform: translateX(100%);
+}
+.filter__toggle-label {
+  margin-left: 0.75rem;
+  color: #4b5563;
+}
+.filter__apply {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #f97316;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.filter__apply:hover {
+  background-color: #ea580c;
+}

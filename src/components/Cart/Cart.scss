@@ -1,0 +1,130 @@
+@import "../../App.scss";
+.carts {
+  position: relative;
+  background: $colorFFF;
+  border-radius: 8px;
+
+  &__quantity {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: $color41;
+    padding: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    background: $colorFFF;
+    border-radius: 8px;
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 170px;
+  }
+
+  &__likeBtn {
+    padding: 5px;
+    border-radius: 8px;
+    background: $colorF3;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    i {
+      font-size: 20px;
+      color: $color41;
+    }
+  }
+
+  &__discount {
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: $colorFFF;
+    background: $colorFF6;
+    border-radius: 4px;
+    position: absolute;
+    left: 10px;
+    top: 30%;
+  }
+
+  &__data {
+    padding: 8px;
+  }
+  &__price-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__price {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: left;
+    color: $color41;
+
+    span {
+      color: $colorBFB;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: left;
+    }
+  }
+
+  &__priceR {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: right;
+  }
+  &__name {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: $color41;
+    padding: 8px 0px;
+  }
+
+  &__stars {
+    i {
+      font-size: 16px;
+    }
+    .fa-solid {
+      color: $colorFF6;
+    }
+    .fa-regular {
+      color: #bfbfbf;
+    }
+  }
+
+  &__shopBtn {
+    padding: 8px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: $color70;
+    border: 1px solid $color70;
+    border-radius: 8px;
+    background: transparent;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  &__shopBtn:hover,
+  &__shopBtn:focus {
+    color: $colorFFF;
+    background: $colorFF6;
+    border: 1px solid $colorFF6;
+  }
+}
+// <i class=""></i>

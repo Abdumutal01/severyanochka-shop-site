@@ -1,0 +1,110 @@
+@import "../../../App.scss";
+.products {
+  &__cart {
+    padding: 10px;
+    background: $colorFFF;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 2px 4px 0px #0000001a;
+
+    gap: 30px;
+    &--smallDiv {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &--img {
+      width: 80px;
+      height: 72px;
+      border-radius: 8px;
+    }
+
+    &--box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--price {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $color41;
+      span {
+        color: $color60;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+
+    &--name {
+      color: $color41;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    &--nextPrice {
+      display: flex;
+      gap: 8px;
+    }
+    &--cartPrice,
+    &--priceR,
+    &--sht {
+      color: $color41;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 18px;
+      span {
+        color: $colorBFB;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+
+    &--priceR,
+    &--sht {
+      font-weight: 400;
+    }
+
+    &--discount {
+      padding: 4px 8px;
+      border-radius: 5px;
+      color: $colorFFF;
+      background: $colorFF6;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    &--priceD {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      gap: 20px;
+    }
+    &--btnBox {
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      background: $color70;
+      margin: 0 auto;
+    }
+    &--endBox {
+      align-items: center;
+      grid-template-columns: 100px 130px;
+      gap: 60px;
+    }
+
+    &--btns {
+      background: transparent;
+      cursor: pointer;
+      border-radius: 8px;
+      color: $colorFFF;
+      padding: 8px;
+    }
+  }
+}

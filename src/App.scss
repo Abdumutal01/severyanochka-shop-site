@@ -1,0 +1,70 @@
+@import "./assets/scss/main.scss";
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  color: $color41;
+}
+
+.inner {
+  color: $color41;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 96px;
+}
+.links {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color60;
+}
+.general {
+  display: grid;
+  grid-gap: 40px;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+.title-box {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, auto);
+  margin-bottom: 40px;
+}
+
+.urls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $color41;
+  margin-bottom: 27px;
+  .two{
+      color: $color8F
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .general {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .general {
+    grid-template-columns: repeat(1, 90%);
+    justify-content: center;
+
+    .carts {
+      img {
+        height: 300px;
+      }
+    }
+  }
+}

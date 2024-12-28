@@ -1,0 +1,22 @@
+@import "../../App.scss";
+
+.likes {
+  margin-top: 24px;
+  &__general {
+    margin-top: 70px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20% 80%;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .likes {
+  &__general {
+  grid-template-columns: repeat(1, 100%);
+  }
+   .filter{
+    display: none;
+   }
+  }
+}

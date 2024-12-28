@@ -1,0 +1,180 @@
+@import "../App.scss";
+
+.header {
+  padding: 16px 0px;
+  background-color: $colorFFF;
+  box-shadow: 2px 4px 8px 0px #0000001a;
+
+  .active,
+  .inactive {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .active {
+    color: #ff6633;
+  }
+  .inactive {
+    color: $color41;
+  }
+
+  &__general {
+    display: grid;
+    grid-gap: 40px;
+    position: relative;
+    grid-template-columns: repeat(5, auto);
+  }
+
+  &__logo-img2 {
+    display: none;
+  }
+
+  &__btnKatalogiya {
+    padding: 8px;
+    background: $color70;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    color: $colorFFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  .mobila {
+    display: none;
+  }
+
+  &__catalog {
+    max-height: 0;
+    overflow: hidden;
+    background: $colorFFF;
+
+    transition: max-height 0.3s ease-out;
+    &--open {
+      max-height: 100%;
+      padding: 40px 0px;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      justify-content: space-between;
+    }
+  }
+
+  &__catalog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    &__logo-img {
+      display: none;
+    }
+
+    &__logo-img2 {
+      display: block;
+    }
+
+    &__btnKatalogiya {
+      padding: 8px 10px;
+
+      i {
+        font-size: 24px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    &__general {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    &__catalog {
+      &--open {
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+      }
+    }
+    &__catalog-list {
+      margin-bottom: 24px;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .header {
+    &__general {
+      justify-content: space-around;
+    }
+    &__btnKatalogiya {
+      display: none;
+    }
+    .box {
+      display: none;
+    }
+    &__catalog {
+      left: 0;
+      position: fixed;
+      z-index: 999;
+      background: $colorFFF;
+      &--open {
+        padding: 52px 20px;
+        grid-gap: 30px;
+      }
+    }
+    .mobila {
+      display: block;
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: 9999;
+      background: $colorFFF;
+      box-shadow: 2px 4px 8px 0px #0000001a;
+
+      &__general {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 8px 0px;
+
+        i {
+          font-size: 22px;
+          color: $color41;
+        }
+
+        p {
+          font-size: 8px;
+          font-weight: 400;
+          line-height: 12px;
+          text-align: center;
+        }
+      }
+      &__btnKatalogiya {
+        background: transparent;
+        color: $color41 i {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}

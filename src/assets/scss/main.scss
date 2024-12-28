@@ -1,0 +1,34 @@
+@import './fonts';
+@import './variable';
+@import './star';
+@import './body';
+@import './container';
+
+
+*,
+*::after,
+*::before {
+    @include star()
+}
+
+body {
+    @include body();
+    background: $colorFBF ;
+}
+
+.container {
+    @include container();
+}
+
+@media screen and (max-width:992px) {
+    .container {
+        width: 85%;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .container {
+        width: 95%;
+    }
+}

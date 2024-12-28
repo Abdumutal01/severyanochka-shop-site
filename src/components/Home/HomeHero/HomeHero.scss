@@ -1,0 +1,73 @@
+@import '../../../App.scss';
+
+.homeHero {
+    background-image: url(../../../assets/img/homeHeroBgImg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &__general {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        color: $color41;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 72px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .homeHero {
+        &__general {
+            padding-top: 32px;
+        }
+
+        &__img {
+            width: 198px;
+            height: 132px;
+            opacity: 0px;
+
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .homeHero {
+        &__general{
+            padding-top: 0;
+        }
+        &__img {
+            display: none;
+        }
+
+        &__title {
+            padding: 27px 15px;
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .homeHero {
+
+
+        &__title {
+            padding: 27px 15px;
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+}

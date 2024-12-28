@@ -1,0 +1,87 @@
+@import "../../App.scss";
+
+.orders {
+  margin-top: 27px;
+
+  &__boxes {
+    margin-top: 100px;
+  }
+  &__dateBox,
+  &__priceBox,
+  &__hero {
+    display: flex;
+    align-items: center;
+  }
+  &__hero {
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  &__dateBox,
+  &__priceBox {
+    gap: 24px;
+  }
+
+  &__date,
+  &__time,
+  &__price {
+    color: $color41;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+
+  &__btnThe1,
+  &__btnThe2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: $color41;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  &__btnThe1 {
+    background: #f3f2f1;
+  }
+  &__btnThe2 {
+    background: #d80000;
+    color: $colorFFF;
+  }
+  &__price {
+    font-weight: 400;
+  }
+  &__calBtn {
+    background: $color70;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: $colorFFF;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+
+    i {
+      color: $color41;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .orders {
+    &__time {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .orders {
+    &__dateBox,
+    &__priceBox {
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+}

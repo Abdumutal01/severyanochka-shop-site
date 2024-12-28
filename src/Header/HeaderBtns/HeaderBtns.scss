@@ -1,0 +1,56 @@
+@import "../../App.scss";
+
+.header {
+  &__btnBox {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  Link {
+    display: block;
+  }
+  &__btnBox-btn {
+    background: transparent;
+    cursor: pointer;
+    color: $color41;
+    position: relative;
+
+    i {
+      font-size: 22px;
+    }
+
+    span {
+      position: absolute;
+      top: -6px;
+      right: 7px;
+      background: $colorFF6;
+      padding: 0 4px;
+      border-radius: 10px;
+      color: $colorFFF;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    &__btnBox-btn {
+      span {
+        position: absolute;
+        top: -6px;
+        right: 0px;
+        background: $colorFF6;
+        padding: 0 4px;
+        border-radius: 10px;
+        color: $colorFFF;
+      }
+    }
+  }
+}
