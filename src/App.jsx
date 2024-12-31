@@ -9,6 +9,7 @@ import Products from "./components/Products/Products";
 import Orders from "./components/Orders/Orders";
 import Likes from "./components/Likes/Likes";
 import Delivery from "./components/Delivery/Delivery";
+import dataJson from './assets/data/data.json'
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -19,11 +20,15 @@ export default function App() {
     localStorage.setItem('orders', JSON.stringify([]))
   }
 
+
   useEffect(() => {
-    fetch("http://localhost:3002/products3")
+    fetch("https://597440ea-7b01-4e0f-847c-6ed453d5004b.mock.pstmn.io/products2?id=b2")
       .then((res) => res.json())
       .then((info) => setData(info));
   }, []);
+
+
+
 
   console.log(data);
 

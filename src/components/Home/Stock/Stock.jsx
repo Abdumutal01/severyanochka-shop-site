@@ -4,7 +4,7 @@ import useFetch from "../../../useFetch";
 import Cart from "../../Cart/Cart";
 import { Link } from "react-router";
 export default function Stock() {
-  const data = useFetch("http://localhost:3002/products1");
+  const data = useFetch("https://597440ea-7b01-4e0f-847c-6ed453d5004b.mock.pstmn.io/products1");
 
   console.log(data.data);
 

@@ -1,12 +1,13 @@
 import React from "react";
 import "./NewItems.scss";
-
+// import info from '../../../../data/data.json'
 import useFetch from "../../../useFetch";
 import { Link } from "react-router";
 import Cart from "../../Cart/Cart";
 
 export default function NewItems() {
-  const data = useFetch("http://localhost:3002/products2").data;
+  const data = useFetch("https://597440ea-7b01-4e0f-847c-6ed453d5004b.mock.pstmn.io/products2").data;
+  // const data =  info.products1;
   console.log(data);
 
   return (
