@@ -3,8 +3,8 @@ import '../App.scss'
 
 export default function Container({ children }) {
     return (
-        <section className='container'>
+        <div className='container'>
             {children}
-        </section>
+        </div>
     )
 }

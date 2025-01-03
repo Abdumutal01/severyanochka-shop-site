@@ -1,0 +1,110 @@
+@import "../../../App.scss";
+.aboutUs {
+  margin-top: 26px;
+  //   height: 100vh;
+
+  &__hero {
+    padding-top: 40px;
+    background-image: url(../../../assets/img/aboutUsHeroBgImg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 400px;
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  &__imgBox {
+    background-image: url(../../../assets/img/aboutUsImgBoxBgImg.png);
+    background-size: cover;
+  }
+  &__text {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $colorFF6;
+  }
+  &__general {
+    margin-top: 120px;
+    display: grid;
+    grid-gap: 75px;
+    grid-template-columns: 1fr 1.5fr 1.7fr;
+  }
+  &__img{
+    width: 100%;
+  }
+  &__carts {
+    display: flex;
+    gap: 10px;
+  }
+  &__texts {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $color41;
+    margin-bottom: 16px;
+  }
+  &__inner {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $color41;
+  }
+  &__smallBox {
+    margin: 120px 0px 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+// http://127.0.0.1:5500/
+// test it
+
+@media screen and (max-width: 992px) {
+  .aboutUs {
+    &__box {
+      display: flex;
+      flex-direction: column;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    &__general {
+      margin-top: 100px;
+      grid-gap: 32px;
+      grid-template-columns: repeat(2, auto);
+      .aboutUs__carts:nth-child(3) {
+        grid-column-end: span 3;
+      }
+    }
+
+    &__texts {
+      font-size: 14px;
+      line-height: 21px;
+    }
+    &__inner {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutUs {
+    &__general {
+      display: flex;
+      flex-direction: column;
+    }
+    &__texts,
+    &__inner {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}

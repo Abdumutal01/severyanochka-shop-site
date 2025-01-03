@@ -22,7 +22,8 @@
     display: grid;
     grid-gap: 40px;
     position: relative;
-    grid-template-columns: repeat(5, auto);
+    justify-content: space-between;
+    grid-template-columns: repeat(4, auto);
   }
 
   &__logo-img2 {
@@ -73,6 +74,7 @@
 
   .box {
     display: flex;
+    gap: 20px;
     align-items: center;
     justify-content: space-between;
   }
@@ -102,28 +104,29 @@
   }
 }
 
+// @media screen and (max-width: 768px) {
+//   .header {
+//     &__general {
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-around;
+//     }
+//     &__catalog {
+//       &--open {
+//         grid-template-columns: repeat(2, auto);
+//         justify-content: center;
+//       }
+//     }
+//     &__catalog-list {
+//       margin-bottom: 24px;
+//     }
+//   }
+// }
 @media screen and (max-width: 768px) {
   .header {
     &__general {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
-    &__catalog {
-      &--open {
-        grid-template-columns: repeat(2, auto);
-        justify-content: center;
-      }
-    }
-    &__catalog-list {
-      margin-bottom: 24px;
-    }
-  }
-}
-@media screen and (max-width: 500px) {
-  .header {
-    &__general {
-      justify-content: space-around;
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
     }
     &__btnKatalogiya {
       display: none;

@@ -1,0 +1,67 @@
+@import "../../../App.scss";
+.contacts {
+  margin-top: 27px;
+  &__box1,
+  &__inners span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__box1 {
+    gap: 80px;
+    margin-top: 40px;
+  }
+  &__innerTels {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-decoration-line: underline;
+    color: $color41;
+    padding-left: 30px;
+  }
+  &__stores {
+    margin: 32px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__storeLogo {
+    width: auto;
+  }
+  &__texts {
+    gap: 8px;
+    display: flex;
+    color: $color41;
+    margin-top: 9px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    a {
+      color: $color41;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contacts {
+    &__box1 {
+      margin-top: 32px;
+    }
+    &__texts {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .contacts {
+    &__box1 {
+      display: grid;
+      grid-template-columns: repeat(1, 100%);
+    }
+    &__stores {
+      justify-content: space-between;
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+}

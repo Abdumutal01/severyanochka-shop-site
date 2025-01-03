@@ -13,18 +13,21 @@
   font-weight: 700;
   line-height: 96px;
 }
+
 .links {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: $color60;
 }
+
 .general {
   display: grid;
   grid-gap: 40px;
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
 }
+
 .title-box {
   display: grid;
   justify-content: space-between;
@@ -39,10 +42,14 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  color: $color41;
   margin-bottom: 27px;
-  .two{
-      color: $color8F
+
+  .link {
+    color: $color41;
+  }
+
+  .two {
+    color: $color8F;
   }
 }
 
@@ -51,6 +58,12 @@
     font-size: 24px;
     line-height: 36px;
   }
+
+  .inner {
+    font-size: 48px;
+    line-height: 72px;
+  }
+
   .general {
     grid-template-columns: repeat(2, 1fr);
   }

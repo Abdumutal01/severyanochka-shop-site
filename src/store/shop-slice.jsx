@@ -1,8 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const ordersArr =  [],
+export const ordersArr = [],
   likesArr = [],
   productsArr = [];
+
+  let TestOrders = JSON.parse(localStorage.getItem("orders")) || null;
+
+  let oldOrders = !TestOrders
+  ? []
+  : TestOrders.slice(0).map((item) => item.orders);
+
+export const orders = oldOrders;
+
 
 
 const initialState = {
@@ -60,9 +69,6 @@ const shopSlice = createSlice({
       if (state.totalCarts >= 0) {
         if (testQty) {
           state.totalCarts--;
-          // state.products = state.products.filter(
-          //   (test) => test.id !== items.id
-          // );
         }
       }
     },
@@ -105,6 +111,7 @@ const shopSlice = createSlice({
         products.totalPrice = products.totalPrice + gPrice;
       }
     },
+
     removeProducts(state, action) {
       state.totalQuantity--;
       const newProduct = action.payload;
@@ -127,12 +134,10 @@ const shopSlice = createSlice({
 
         products.quantity--;
         products.totalPrice = products.totalPrice - gPrice;
-        // this.totalCarts(newProduct.quantity)
       }
     },
 
     addOrder(state, action) {
-
       const order = action.payload;
 
       const obj = {
@@ -145,9 +150,6 @@ const shopSlice = createSlice({
       const newOrders = [obj, ...getOrders];
 
       localStorage.setItem("orders", JSON.stringify(newOrders));
-   
-      // state.orders = [...getOrders]
-   
     },
 
     addDate(state, action) {

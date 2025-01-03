@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Header.scss";
 import { Link, NavLink } from "react-router";
-
 import headerLogoImg from "../assets/img/headerLogo.png";
 import headerLogoImg2 from "../assets/img/headerLogo2.png";
 import HeaderForm from "./HeaderForm/HeaderForm";
@@ -20,17 +19,20 @@ export default function Header() {
     <header className="header">
       <Container>
         <div className="header__general">
+          
           <div className="header__logoBox">
             <Link className="header__logo-link" to="/">
               <img src={headerLogoImg} alt="" className="header__logo-img" />
               <img src={headerLogoImg2} alt="" className="header__logo-img2" />
             </Link>
           </div>
+
           <button className="header__btnKatalogiya" onClick={toggleHendler}>
             <i className="fa-solid fa-bars" />
 
             <span> Каталог</span>
           </button>
+
           <HeaderForm />
 
           <div className="box">

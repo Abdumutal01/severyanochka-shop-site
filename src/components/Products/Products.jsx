@@ -11,6 +11,7 @@ import Cart from "./ProductsCart/ProductsCart";
 import { shoppingAction } from "../../store/shop-slice";
 import productsBonusIcon from "../../assets/img/productsBonusIcon.png";
 import { useNavigate } from "react-router";
+import PagesHero from "../PagesHero/PagesHero";
 
 export default function Products() {
   const products = useSelector((state) => state.shop.products);
@@ -106,12 +107,7 @@ export default function Products() {
   return (
     <section className="products">
       <Container>
-        <p className="urls">
-          <span>Главная</span>
-          <i className="fa-solid fa-chevron-right" />
-
-          <span className="two">Корзина</span>
-        </p>
+     <PagesHero text='Корзина' />
         <h2 style={{ position: "relative" }} className="inner">
           Корзина
           <span

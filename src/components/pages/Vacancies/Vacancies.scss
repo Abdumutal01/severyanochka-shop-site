@@ -1,0 +1,83 @@
+@import "../../../App.scss";
+.vacancies {
+  margin-top: 27px;
+  &__general {
+    margin-top: 60px;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(3, auto);
+  }
+  &__carts {
+    padding: 32px;
+    background: $colorFFF;
+    border-radius: 8px;
+    color: $color41;
+    a {
+      color: $color41;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  &__inner {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-top: 16px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 8px;
+  }
+  &__telBox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &__tel {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-decoration-line: underline;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .vacancies {
+    &__title {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    &__inner {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__text,
+    &__tel {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .vacancies {
+    margin-top: 8px;
+    &__general {
+      margin-top: 32px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .vacancies {
+    &__general {
+      padding: 0px 10px;
+      grid-template-columns: repeat(1, 100%);
+    }
+  }
+}

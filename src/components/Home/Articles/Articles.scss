@@ -1,0 +1,89 @@
+@import "../../../App.scss";
+.articles {
+  margin-top: 120px;
+  &__general {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__card {
+    width: 100%;
+    border-radius: 10px;
+    background: $colorFFF;
+  }
+  &__img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+  }
+  &__data {
+    padding: 10px;
+    position: relative;
+  }
+  &__date {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $color8F;
+  }
+  &__title {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    color: $color41;
+    margin: 10px 0px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #333333;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+ 
+    color: $color70;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    background: #e5ffde;
+    padding: 4px 16px;
+    border-radius: 8px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+
+    cursor: pointer;
+    transition: 0.4s ease-in;
+  }
+  &__btn:hover,
+  &__btn:active,
+  &__btn:focus {
+    color: $colorFFF;
+    background: $color70;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .articles {
+    &__title {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__text{
+        font-size: 12px;
+        line-height: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .articles{
+        &__general{
+            grid-template-columns: repeat(1, 100%);
+        }
+    }
+}

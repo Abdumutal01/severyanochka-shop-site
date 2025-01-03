@@ -3,7 +3,7 @@ import "./Cart.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { shoppingAction } from "../../store/shop-slice";
 
-export default function Cart({ things, key }) {
+export default function Cart({ things }) {
   const {
     id,
     discount,
@@ -69,7 +69,7 @@ export default function Cart({ things, key }) {
   };
 
   return (
-    <div className="carts" key={key}>
+    <div className="carts" key={id}>
       {quantity ? (
         <button className="carts__quantity">
           <i className="fa-solid fa-cart-shopping" />
@@ -102,7 +102,7 @@ export default function Cart({ things, key }) {
         <h2 className="carts__name">{name}</h2>
 
         <div className="carts__stars">
-          {stars.map((item, index) => (
+          {stars.forEach((item, index) => (
             <i
               key={index}
               className={`${

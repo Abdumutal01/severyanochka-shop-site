@@ -1,1 +1,103 @@
-@import '../App.scss';
+@import "../App.scss";
+
+.footer {
+  margin-top: 80px;
+  background: url(../assets/img/footerBgImg.png) no-repeat center/cover #f9f4e2;
+  padding: 24px 0px;
+
+  &__nav,
+  &__box1,
+  &__box2 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+  }
+  &__nav {
+    justify-content: space-between;
+  }
+  &__listBox,
+  &__list,
+  &__list2,
+  &__iconBox {
+    display: flex;
+    align-items: center;
+  }
+  &__box1,
+  &__box2,
+  &__list {
+    gap: 40px;
+  }
+  &__iconBox {
+    gap: 16px;
+  }
+
+  &__links {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $color41;
+  }
+  &__tel {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color41;
+    gap: 8px;
+  }
+  &__logoBox2{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    &__box1,
+    &__box2,
+    &__list {
+      gap: 20px;
+    }
+    &__listBox {
+      align-items: start;
+      flex-direction: column;
+    }
+    &__iconBox {
+      display: grid;
+      grid-gap: 8px;
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-bottom: 100px;
+    &__logoBox {
+      display: none;
+    }
+    &__nav {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column-reverse;
+    }
+
+    &__endDiv {
+      display: grid;
+      justify-content: space-between;
+      grid-gap: 200px;
+      grid-template-columns: repeat(2, auto);
+      margin-bottom: 30px;
+    }
+    &__logoBox2{
+        display: block;
+    }
+
+    &__box1,
+    &__box2 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__iconBox {
+      grid-template-columns: repeat(4, auto);
+    }
+  }
+}
