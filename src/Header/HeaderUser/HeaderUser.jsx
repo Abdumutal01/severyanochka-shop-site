@@ -86,6 +86,6 @@ export default function HeaderUser() {
           </Box>
     </>
   ) : (
-    <button onClick={handleLogIn}>SignIn</button>
+    <button className="header__user-signIn" onClick={handleLogIn}>Sign In</button>
   );
 }

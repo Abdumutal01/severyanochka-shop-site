@@ -1,52 +1,61 @@
-@import '../../App.scss';
+@import "../../App.scss";
 
 .header {
-    &__user-box {
-        display: flex;
-        gap: 20px;
-        cursor: pointer;
-        align-items: center;
+  &__user-box {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  &__user-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+  }
+
+  &__user-name {
+    color: $color23;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__user-btn {
+    padding: 8px;
+    background: transparent;
+
+    i {
+      font-size: 22px;
+      color: $color41;
     }
+  }
 
-    &__user-div {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    &__user-img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50px;
-    }
-
-    &__user-name {
-        color: $color23;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-    }
-
-    &__user-btn {
-        padding: 8px;
-        background: transparent;
-
-        i {
-            font-size: 22px;
-            color: $color41;
-        }
-    }
-
+  &__user-signIn {
+  border-radius: 10px;
+    padding: 8px 15px;
+    background: $color70;
+    color: $colorFFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
-@media screen and (max-width:992px) {
-    .header {
-
-        &__user-btn,
-        &__user-name {
-            display: none;
-        }
+@media screen and (max-width: 992px) {
+  .header {
+    &__user-btn,
+    &__user-name {
+      display: none;
     }
+  }
 }
 
 // @media screen and (max-width:768px) {
