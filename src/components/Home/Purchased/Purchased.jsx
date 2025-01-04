@@ -15,7 +15,7 @@ function Purchased() {
     } else {
       setData(...endOrder);
     }
-    data.map((item) => (item.quantity = 0));
+    data.forEach((item) => (item.quantity = 0));
   }, [endOrder, data]);
   console.log(data);
 

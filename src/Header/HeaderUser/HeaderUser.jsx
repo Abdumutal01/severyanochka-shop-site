@@ -14,8 +14,7 @@ export default function HeaderUser() {
   const [user, setUser] = useState(null)
   console.log(auth);
 
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
 
 
   const handleOpenUserMenu = (event) => {
@@ -37,6 +36,9 @@ export default function HeaderUser() {
       });
   };
 
+  
+  
+
   return user ? (
     <>
     {/* <div className="header__user-box">
@@ -57,7 +59,7 @@ export default function HeaderUser() {
        <Box sx={{ flexGrow: 0}}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              {user?.photoURL &&  <Avatar alt="User" src={user.photoURL} />}
+              {user?.photoURL &&  <Avatar alt="User" src={user.photoURL} /> && console.log(user)}
                
               </IconButton>
             </Tooltip>

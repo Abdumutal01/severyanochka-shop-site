@@ -18,7 +18,7 @@ export default function Home() {
       <Container>
         <Stock />
         <NewItems />
-        <Purchased  />
+        {/* <Purchased  /> */}
         <Special />
         <OurStores />
         <Articles />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ProductsLeftBox.scss";
 import { useDispatch, useSelector } from "react-redux";
 import productsBonusIcon from "../../../assets/img/productsBonusIcon.png";

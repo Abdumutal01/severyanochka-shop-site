@@ -1,8 +1,6 @@
 import React from "react";
 import "./Stock.scss";
-import useFetch from "../../../useFetch";
 import Cart from "../../Cart/Cart";
-import { Link } from "react-router";
 import HomeTitle from "../HomeTitle/HomeTitle";
 
 import stockImg1 from "../../../assets/img/stockImg1.png";

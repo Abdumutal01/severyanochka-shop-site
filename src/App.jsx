@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.scss";
-import useFetch from "./useFetch";
+// import useFetch from "./useFetch";
 import Header from "./Header/Header";
 import Home from "./components/Home/Home";
 import { Route, Routes } from "react-router";
@@ -15,23 +15,17 @@ import Contacts from "./components/pages/Contacts/Contacts";
 import Vacancies from "./components/pages/Vacancies/Vacancies";
 
 export default function App() {
-  const [data, setData] = useState([]);
+
 
   const orderTest = JSON.parse(localStorage.getItem("orders"));
+  const likesTest = JSON.parse(localStorage.getItem("likes"));
 
-  if (!orderTest) {
+  if (!orderTest && !likesTest) {
     localStorage.setItem("orders", JSON.stringify([]));
+    localStorage.setItem("likes", JSON.stringify([]));
   }
 
-  useEffect(() => {
-    fetch(
-      "https://597440ea-7b01-4e0f-847c-6ed453d5004b.mock.pstmn.io/products2?id=b2"
-    )
-      .then((res) => res.json())
-      .then((info) => setData(info));
-  }, []);
 
-  console.log(data);
 
   return (
     <div>
@@ -47,6 +41,7 @@ export default function App() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/vacancies" element={<Vacancies />} />
       </Routes>
+      
       <Footer />
     </div>
   );

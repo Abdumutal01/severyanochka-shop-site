@@ -3,7 +3,7 @@ import "./Contacts.scss";
 import Container from "../../../Container/Container";
 
 import PagesHero from "../../PagesHero/PagesHero";
-import { HomeIcon, House, Percent, Phone } from "lucide-react";
+import {  House, Percent, Phone } from "lucide-react";
 import OurStores from "../../Home/OurStores/OurStores";
 
 import StoresImg1 from "../../../assets/img/contactsStoresImg1.png";
