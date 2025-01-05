@@ -59,7 +59,7 @@ export default function HeaderUser() {
        <Box sx={{ flexGrow: 0}}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              {user?.photoURL &&  <Avatar alt="User" src={user.photoURL} /> && console.log(user)}
+              {user?.photoURL &&  <Avatar alt="User" src={user.photoURL} />}
                
               </IconButton>
             </Tooltip>
