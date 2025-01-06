@@ -18,6 +18,8 @@ export default function ProductsCart({ things, key }) {
 
   const dispatch = useDispatch();
 
+  
+
   let testDt = false;
 
   if (!quantity > 0) {

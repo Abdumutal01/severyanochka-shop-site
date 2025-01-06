@@ -106,5 +106,15 @@
       color: $colorFFF;
       padding: 8px;
     }
+    
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .products {
+    &__cart {
+      display: grid;
+      grid-template-columns: repeat(1, 100%);
+    }
   }
 }

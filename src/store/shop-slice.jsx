@@ -4,15 +4,13 @@ export const ordersArr = [],
   likesArr = [],
   productsArr = [];
 
-  let TestOrders = JSON.parse(localStorage.getItem("orders")) || null;
+let TestOrders = JSON.parse(localStorage.getItem("orders")) || null;
 
-  let oldOrders = !TestOrders
+let oldOrders = !TestOrders
   ? []
   : TestOrders.slice(0).map((item) => item.orders);
 
 export const orders = oldOrders;
-
-
 
 const initialState = {
   orders: ordersArr,
@@ -34,12 +32,13 @@ const shopSlice = createSlice({
     addLike(state, action) {
       if (state.totalLikes >= 0) {
         state.totalLikes++;
+      window.location.reload()
+
         const newLikes = action.payload;
-        const exitingItems = state.likes.find(
-          (item) => item.id === newLikes.id
-        );
+        const likesStore = JSON.parse(localStorage.getItem("likes"));
+        const exitingItems = likesStore.find((item) => item.id === newLikes.id);
         if (!exitingItems) {
-          state.likes.push({
+          const likesObj = {
             id: newLikes.id,
             like: true,
             img: newLikes.img,
@@ -48,7 +47,9 @@ const shopSlice = createSlice({
             price: newLikes.price,
             name: newLikes.name,
             stars: newLikes.stars,
-          });
+          };
+          const oldLikes = [likesObj, ...likesStore];
+          localStorage.setItem("likes", JSON.stringify(oldLikes));
         }
       } else {
         state.totalLikes = 0;
@@ -56,7 +57,12 @@ const shopSlice = createSlice({
     },
 
     removeLike(state, action) {
-      state.likes = state.likes.filter((item) => item.id !== action.payload.id);
+      let likesStore = JSON.parse(localStorage.getItem("likes")) ||[];
+      
+      window.location.reload()
+      console.log(likesStore);
+      likesStore = likesStore.filter((item) => item.id !== action.payload.id);
+      localStorage.setItem('likes', JSON.stringify(likesStore))
 
       if (state.totalLikes >= 0) state.totalLikes--;
       if (state.totalLikes < 0) state.totalLikes = 0;

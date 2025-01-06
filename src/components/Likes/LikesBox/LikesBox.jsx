@@ -5,7 +5,7 @@ import Cart from "../../Cart/Cart";
 import Container from "../../../Container/Container";
 
 export default function LikesBox() {
-  const allLikes = useSelector((state) => state.shop.likes);
+  const allLikes = JSON.parse(localStorage.getItem('likes'));
   console.log(allLikes);
 
   return (

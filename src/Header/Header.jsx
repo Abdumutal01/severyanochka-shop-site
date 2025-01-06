@@ -48,7 +48,7 @@ export default function Header() {
             {headerArreys.item1.map((item, i) => (
               <li key={i} className="header__catalog-item">
                 <NavLink
-                  to={item.to}
+                  to='/nopages'
                   className={({ isActive }) =>
                     isActive ? "active" : "inactive"
                   }
@@ -62,7 +62,7 @@ export default function Header() {
             {headerArreys.item2.map((item, i) => (
               <li key={i} className="header__catalog-item">
                 <NavLink
-                  to={item.to}
+                  to='/nopages'
                   className={({ isActive }) =>
                     isActive ? "active" : "inactive"
                   }
@@ -76,7 +76,7 @@ export default function Header() {
             {headerArreys.item3.map((item, i) => (
               <li key={i} className="header__catalog-item">
                 <NavLink
-                  to={item.to}
+                  to='/nopages'
                   className={({ isActive }) =>
                     isActive ? "active" : "inactive"
                   }
@@ -90,7 +90,7 @@ export default function Header() {
             {headerArreys.item4.map((item, i) => (
               <li key={i} className="header__catalog-item">
                 <NavLink
-                  to={item.to}
+                  to='/nopages'
                   className={({ isActive }) =>
                     isActive ? "active" : "inactive"
                   }

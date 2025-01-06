@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Orders.scss";
 import Container from "../../Container/Container";
 import Cart from "../Cart/Cart";
+import PagesHero from "../PagesHero/PagesHero";
 
 export default function Orders() {
   const [calendar, setCalendar] = useState(false);
@@ -32,11 +33,8 @@ export default function Orders() {
   return (
     <section className="orders">
       <Container>
-        <nav aria-label="breadcrumb" className="urls">
-          <li>Главная</li>
-          <i className="fa-solid fa-chevron-right" />
-          <li className="two">Заказы</li>
-        </nav>
+         <PagesHero text="Заказы" />
+      
 
         <h2 className="inner">Заказы</h2>
 

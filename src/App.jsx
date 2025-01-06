@@ -13,9 +13,12 @@ import Footer from "./Footer/Footer";
 import AboutUs from "./components/pages/AboutUs/AboutUs";
 import Contacts from "./components/pages/Contacts/Contacts";
 import Vacancies from "./components/pages/Vacancies/Vacancies";
+import NoPage from "./components/NoPages/NoPage";
+
+
+export const userInfo = JSON.parse(localStorage.getItem('user'))
 
 export default function App() {
-
 
   const orderTest = JSON.parse(localStorage.getItem("orders"));
   const likesTest = JSON.parse(localStorage.getItem("likes"));
@@ -24,8 +27,6 @@ export default function App() {
     localStorage.setItem("orders", JSON.stringify([]));
     localStorage.setItem("likes", JSON.stringify([]));
   }
-
-
 
   return (
     <div>
@@ -40,9 +41,13 @@ export default function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/vacancies" element={<Vacancies />} />
+        <Route path="/nopages" element={<NoPage />} />
       </Routes>
       
       <Footer />
     </div>
   );
+
 }
+
+

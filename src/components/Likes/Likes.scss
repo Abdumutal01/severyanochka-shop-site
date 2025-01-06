@@ -8,6 +8,28 @@
     align-items: center;
     grid-template-columns: 20% 80%;
   }
+
+  &__empty{
+    height: 50vh;
+    text-align: center;
+    &-title{
+      margin-top: 80px;
+      font-size: 68px;
+      color: $color41;
+    }
+    &-link{
+      display: block;
+      margin-top: 30px;
+      color: $color60;
+      font-size: 25px;
+      transition: all .4s ease-out;
+    }
+    &-link:hover,
+    &-link:active,
+    &-link:focus{
+      color: $colorFF6
+    }
+  }
 }
 
 @media screen and (max-width:992px) {
@@ -18,5 +40,16 @@
    .filter{
     display: none;
    }
+
+   &__empty{
+margin-top: 150px;
+    &-title{
+      margin-top: 40px;
+      font-size: 44px;
+    }
+    &-link{
+      font-size: 18px;
+    }
+  }
   }
 }

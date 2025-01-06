@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { useSelector } from "react-redux";
 
 export default function HeaderBtns() {
-  const likes = useSelector((state) => state.shop.totalLikes);
+  const likes = JSON.parse(localStorage.getItem('likes'));
   const ordersArr = useSelector((state) => state.shop.orders);
 
   const totalQuantity = useSelector((state) => state.shop.totalQuantity);
@@ -15,7 +15,7 @@ export default function HeaderBtns() {
       <Link to="likes">
         <button className="header__btnBox-btn">
           <i className="fa-regular fa-heart" />
-          <span>{likes}</span>
+          <span>{likes.length}</span>
           <p>Избранное</p>
         </button>
       </Link>

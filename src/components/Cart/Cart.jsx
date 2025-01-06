@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Cart.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { shoppingAction } from "../../store/shop-slice";
@@ -21,9 +21,14 @@ export default function Cart({ things }) {
 
   const dispatch = useDispatch();
 
-  const allLikes = useSelector((state) => state.shop.likes);
+  const allLikes = JSON.parse(localStorage.getItem('likes'));
 
   console.log(allLikes);
+
+  const interval = setInterval(()=>{
+    console.log("interval");
+    
+  }, 5000)
 
   const likeHandler = (testId) => {
     if (allLikes.some((item) => item.id === testId)) {
@@ -34,6 +39,7 @@ export default function Cart({ things }) {
       );
       setLikes(!likes);
       console.log("remove Likes");
+      clearInterval(interval)
     } else {
       dispatch(
         shoppingAction.addLike({
@@ -48,9 +54,10 @@ export default function Cart({ things }) {
         })
       );
       console.log("add Likes");
-      setLikes(!likes);
+      // setLikes(!likes);
     }
   };
+  
 
   const productHandler = () => {
     dispatch(
@@ -67,6 +74,8 @@ export default function Cart({ things }) {
       })
     );
   };
+
+ 
 
   return (
     <div className="carts" key={id}>

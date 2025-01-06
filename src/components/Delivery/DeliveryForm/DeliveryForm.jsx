@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./DeliveryForm.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { shoppingAction } from "../../../store/shop-slice";
+import { userInfo } from "../../../App";
 
 const DeliveryForm = () => {
   const dates = useSelector((state) => state.shop.dates || []);
   console.log(dates);
-  
+
   const [dateObj, setDateObj] = useState({ date: "", time: "" });
-  
+
   const [selectedTime, setSelectedTime] = useState("14:00 - 18:00");
   const [changeEmail, setChangeEmail] = useState(false);
-  
-
-
+  const [user, setUser] = useState(null);
 
   const timeSlots = [
     "8:00 - 14:00",
@@ -36,22 +35,21 @@ const DeliveryForm = () => {
     }));
   };
 
-  const changePhone = () => {
-    setChangeEmail(!changeEmail);
-  };
-
   const dispatch = useDispatch();
-
- 
 
   const dateTests = () => {
     dispatch(shoppingAction.addDate({ ...dateObj }));
   };
+  useEffect(() => {
+    setUser(userInfo)
+  }, []);
+  const changePhone = () => {
+    setChangeEmail(!changeEmail);
+  };
 
-
+  console.log(user?.email);
 
   console.log(dateObj);
-
 
   return (
     <div className="delivery-form">
@@ -139,9 +137,10 @@ const DeliveryForm = () => {
         <h2 className="title">Вход</h2>
         <div className="phone-input">
           <div className="phone-input__field">
-            {changeEmail ? (
+            {!changeEmail ? (
               <input
                 type="email"
+                value={user?.email}
                 className="input-field__input"
                 placeholder="write your email"
               />
@@ -149,13 +148,16 @@ const DeliveryForm = () => {
               <input
                 type="tel"
                 className="input-field__input"
-                placeholder="+7912888****"
+                // value=''
+                placeholder="+79128880000"
               />
             )}
           </div>
-          <button onClick={dateTests} className="phone-input__button">Получить код</button>
+          <button onClick={dateTests} className="phone-input__button">
+            Получить код
+          </button>
           <button onClick={changePhone} className="phone-input-btn2">
-            {changeEmail ? "  Войти по телефон" : "  Войти по почте"}
+            {changeEmail ? "  Войти по  почте " : "  Войти по телефон "}
           </button>
         </div>
       </div>

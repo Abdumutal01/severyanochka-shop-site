@@ -99,16 +99,43 @@
     padding: 3px 8px;
     line-height: 18px;
     text-align: center;
-    background: #D80000;
+    background: #d80000;
     border-radius: 3px;
     margin-top: 27px;
   }
-}
-
-@media screen and (max-width: 992px) {
-  .products {
+  &__emty {
+    margin-top: 20px;
+    text-align: center;
+    &-inner {
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 36.57px;
+      color: #000000;
+      margin-top: 20px;
+    }
+    &-text {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 27.32px;
+      color: #838383;
+      margin-bottom: 20px;
+    }
+    &-link{
+      display: block;
+      width: 30%;
+     margin: 0 auto;
+      color: $colorFFF;
+      padding: 20px 30px;
+      background: $color41;
+      border-radius: 20px;
+    }
   }
 }
+
+// @media screen and (max-width: 992px) {
+//   .products {
+//   }
+// }
 
 @media screen and (max-width: 768px) {
   .products {
