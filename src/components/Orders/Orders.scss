@@ -2,7 +2,8 @@
 
 .orders {
   margin-top: 27px;
-  height: 50vh;
+  margin-bottom: 100px;
+  height: 100%;
   &__boxes {
     margin-top: 100px;
   }
@@ -66,6 +67,10 @@
     i {
       color: $color41;
     }
+  }
+  &__emty{
+    margin-top: 50px;
+    height: 50vh;
   }
 }
 @media screen and (max-width: 992px) {

@@ -106,6 +106,9 @@
   &__emty {
     margin-top: 20px;
     text-align: center;
+    &-img{
+      width: 100%;
+    }
     &-inner {
       font-size: 30px;
       font-weight: 500;
@@ -122,7 +125,7 @@
     }
     &-link{
       display: block;
-      width: 30%;
+      max-width: 300px;
      margin: 0 auto;
       color: $colorFFF;
       padding: 20px 30px;

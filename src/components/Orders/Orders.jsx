@@ -30,11 +30,10 @@ export default function Orders() {
     }
   }, [orderArr, localDate]);
 
-  return (
+  return orderArr.length > 0 ? (
     <section className="orders">
       <Container>
-         <PagesHero text="Заказы" />
-      
+        <PagesHero text="Заказы" />
 
         <h2 className="inner">Заказы</h2>
 
@@ -77,6 +76,16 @@ export default function Orders() {
         ) : (
           <p>Заказы отсутствуют.</p>
         )}
+      </Container>
+    </section>
+  ) : (
+    <section className="orders__emty">
+      <Container>
+        <PagesHero text="Заказы" />
+
+        <h2 className="inner">Заказы</h2>
+
+        <p>Заказы отсутствуют.</p>
       </Container>
     </section>
   );
