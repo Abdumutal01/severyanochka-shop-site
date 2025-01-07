@@ -106,9 +106,7 @@
   &__emty {
     margin-top: 20px;
     text-align: center;
-    &-img{
-      width: 100%;
-    }
+  
     &-inner {
       font-size: 30px;
       font-weight: 500;
@@ -123,10 +121,10 @@
       color: #838383;
       margin-bottom: 20px;
     }
-    &-link{
+    &-link {
       display: block;
       max-width: 300px;
-     margin: 0 auto;
+      margin: 0 auto;
       color: $colorFFF;
       padding: 20px 30px;
       background: $color41;
@@ -148,6 +146,11 @@
     &__orderBtn {
       background: #fcd5ba;
       color: $colorFF6;
+    }
+    &__emty {
+      &-img {
+        width: 100%;
+      }
     }
   }
 }

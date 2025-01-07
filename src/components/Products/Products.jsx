@@ -161,7 +161,7 @@ export default function Products() {
                 <hr className="products__line" />
                 <div>
                   <p className="products__text d-flex">
-                    {totalCarts } товара : <span>{totalPrice.toFixed(2)} ₽</span>
+                    {totalCarts} товара : <span>{totalPrice.toFixed(2)} ₽</span>
                   </p>
 
                   <p className="products__text d-flex">
@@ -221,7 +221,9 @@ export default function Products() {
           </h2>
 
           <div className="products__emty">
-            <img src={emtyImg} alt="" className="products__emty-img" />
+          
+              <img src={emtyImg} alt="" className="products__emty-img" />
+            
             <h3 className="products__emty-inner">Корзина пуста</h3>
             <h3 className="products__emty-text">
               Но это никогда не поздно исправить :)
